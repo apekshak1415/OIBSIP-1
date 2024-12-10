@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="calculator-boundary">
+    <form name="calculatorForm">
+      <h1 class="center-text">Basic Calculator</h1>
+      <table class="center-table" cellspacing="10" cellpadding="20">
+        <tr>
+          <td colspan="4">
+            <input type="text" name="display" value="0" size="50" readonly>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="button" value="7" onclick="enterNumber(7)"></td>
+          <td><input type="button" value="8" onclick="enterNumber(8)"></td>
+          <td><input type="button" value="9" onclick="enterNumber(9)"></td>
+          <td><input type="button" value="+" onclick="setOperation('+')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="4" onclick="enterNumber(4)"></td>
+          <td><input type="button" value="5" onclick="enterNumber(5)"></td>
+          <td><input type="button" value="6" onclick="enterNumber(6)"></td>
+          <td><input type="button" value="-" onclick="setOperation('-')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="1" onclick="enterNumber(1)"></td>
+          <td><input type="button" value="2" onclick="enterNumber(2)"></td>
+          <td><input type="button" value="3" onclick="enterNumber(3)"></td>
+          <td><input type="button" value="*" onclick="setOperation('*')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="0" onclick="enterNumber(0)"></td>
+          <td><input type="button" value="/" onclick="setOperation('/')"></td>
+          <td><input type="button" value="%" onclick="setOperation('%')"></td>
+          <td><input type="button" value="=" onclick="calculateResult()"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="reset" value="C" onclick="clearDisplay()"></td>
+          <td colspan="2"><input type="button" value="del" onclick="backspace()"></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
